@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'QuickSand',sans-serif;
+    background-color: #fff0f5;
+    color: #e91e63;
+    transition: background 0.3s, color 0.3s;
+    padding: 20px;
+    text-align: center;
+}
+
+body.dark{
+    background: #1a1a1a;
+    color: #ffd1dc;
+}
+
+.themeToggle{
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.finalMessage{
+    font-family: "Great Vibes",cursive;
+    font-size: 2em;
+    margin-top: 10px;
+    color: #ff69b4;
+}
+
+.photoGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.photoCard{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 160px;
+    transition: transform 0.3s;
+}
+
+.photoCard:hover{
+    transform: scale(1.05);
+}
+
+.photoCard img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.avatarContainer{
+    margin: 30px auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform: translateY(0);}
+    50%{transform: translateY(-10px);}    
+}
+
+.Avatar{
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 0,0,10px rgba(255,105,180,0.6);
+}
+
+.scratchContainer{
+    position: relative;
+    margin: 20px auto;
+    width: 300px;
+    height: 100px;
+}
+
+#scratchCanvas{
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.scratchReveal{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    color: #e91e63;
+    font-size: 1.1em;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.Quiz h3{
+    margin-bottom: 10px;
+}
+
+#quizResult{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.flipBook img{
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.whatsNext{
+    font-size: 1.2em;
+    margin: 30px auto;
+    font-style: italic;
+}
+
+.drawSection{
+    margin-top: 20px;
+}
+
+#drawCanvas{
+    border: 2px dashed #ff69b4;
+    width: 280px;
+    height: 180px;
+    touch-action: none;
+}
+
+.restartBtn{
+    margin-top: 20px auto;
+    padding: 10px 16px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+}
+
+/*darkMode addition*/
+body.dark.photoCard{
+    background-color: #333;
+    color: #ffd1dc;
+}
+
+body.dark.quizBtn{
+    background-color: #ff1493;
+}
+
+.body.dark.scratchReveal{
+    color: #fff;
+}

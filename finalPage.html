@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finalSurprise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+vibes&family=Quicksand&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="finalPage.css">
+</head>
+
+<body>
+    <div class="themeToggle">
+        <label>
+            <input type="checkbox" id="modeSwitch">
+            🌙Toggle Theme
+        </label>
+    </div>
+
+    <h1 class="finalMessage"></h1>
+
+    <!--instaStyle Grid-->
+    <section class="photoGrid">
+        <div class="photoCard"><img src="mylove1.jpg" alt="Memory1"><p>farewell</p></div>
+        <div class="photoCard"><img src="mylove2.jpg" alt="Memory1"><p>first photo together</p></div>
+        <div class="photoCard"><img src="mylove3.jpg" alt="Memory1"><p>in wedding</p></div>
+        <div class="photoCard"><img src="mylove4.jpg" alt="Memory1"><p>your house</p></div>
+        <div class="photoCard"><img src="mylove5.jpg" alt="Memory1"><p>trip</p></div>
+        <div class="photoCard"><img src="mylove6.jpg" alt="Memory1"><p>trip with bf</p></div>
+        <div class="photoCard"><img src="mylove7.jpg" alt="Memory1"><p>after school</p></div>
+        <div class="photoCard"><img src="mylove8.jpg" alt="Memory1"><p>beautiful as usual</p></div>
+        <div class="photoCard"><img src="mulove9.jpg" alt="Memory1"><p>yours metime</p></div>
+    </section>
+
+    <!--animatedAvatar-->
+    <div class="avatarContainer">
+        <img src="tanuj.jpg" alt="TanujAvatar" class="Avatar">
+        <p>Your buddy(Tanuj) is celebrating🎊</p>
+    </div>
+
+    <!--scratchCard-->
+    <div class="scratchContainer">
+        <canvas id="scratchCanvas"></canvas>
+        <div class="scratchReveal">🎁You've unlocked: OneHug + coffeeDate</div>
+    </div>
+
+    <!--memoryQuiz-->
+    <div class="Quiz">
+        <h3>What was the place when we took the food together?</h3>
+        <button onclick="answerQuiz(this)">Road</button>
+        <button onclick="answerQuiz(this)">Bakery</button>
+        <button onclick="answerQuiz(this)">School</button>
+        <button onclick="answerQuiz(this)">Restaurant</button>
+        <button onclick="answerQuiz(this)">Cafe</button>
+
+        <p id="quizResult"></p>
+    </div>
+
+    <!--polaroidFlipBook-->
+    <div class="flipBook">
+        <img id="flipPhoto" src="mylove1.jpg" alt="flipBook">
+        <img id="flipPhoto" src="mylove4.jpg" alt="flipBook">
+        <img id="flipPhoto" src="mylove7.jpg" alt="flipBook">
+        <img id="flipPhoto" src="mylove5.jpg" alt="flipBook">
+        <img id="flipPhoto" src="mylove8.jpg" alt="flipBook">
+        <img id="flipPhoto" src="mylove7.jpg" alt="flipBook">
+        <p id="flipCaption">Moments we lived together🫰</p>
+    </div>
+
+    <!--whatsNext-->
+    <div class="whatsNext">
+        <p>Coming soon: cakeDrop + meetUp🧑‍🤝‍🧑</p>
+    </div>
+
+    <!--drawingCanvas-->
+    <div class="drawsection">
+        <p>Write your best memory with me</p>
+        <canvas id="drawCanvas"></canvas>
+    
+        <button onclick="clearCanvas()">Clear</button>
+    </div>
+
+    <!--restartBtn-->
+    <button class="restartBtn" onclick="location.href='birthdayCard.html'">nextPage</button>
+
+    <script src="finalPage.js"></script>
+</body>
+
+</html>

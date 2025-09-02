@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href="manifest.json">
+    <title>BirthDay Wishes</title>
+</head>
+
+<body>
+    <div class="bubbles"></div>
+
+    <div class="loginContainer">
+        <form id="loginForm">
+            <h2>Happy Birthday dear</h2>
+            <input type="text" id="Name" placeholder="Your cute name" required />
+            <input type="password" id="passCode" placeholder="The name I chose for you" required />
+            <input type="text" id="Wish" placeholder="Your wish" required />
+            <input type="text" id="Memory" placeholder="Your fav memoru with me" required />
+
+            <p id="error" class="errorMessage"></p>
+            <button type="submit" id="sendBtn">Send Wish</button>
+        </form>
+    </div>
+
+    <!--floatingHeat Container-->
+    <div id="heartContainer"></div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

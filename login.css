@@ -1,0 +1,184 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to bottom,#fff0f5,#ffe4e1);
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/*bubbleBackground*/
+.bubbles{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255,182,193,0.3));
+    animation: floatBubbles 12s linear infinite;
+}
+
+@keyframes floatBubbles{
+    0%{background-position: 50% 100%;}
+    100%{background-position: 50% 0%;}
+}
+
+/*loginForm*/
+.loginContainer{
+    z-index: 1;
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(255,105,180,0.4);
+    animation: fadeIn 1.2s ease forwards;
+    width: 90%;
+    max-width: 360px;
+    text-align: center;
+}
+
+/*fadeIn animation for form*/
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loginContainer h2{
+    color: #e60073;
+    margin-bottom: 20px;
+}
+
+input{
+    width: 100;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ffd6e7;
+    border-radius: 10px;
+    font-size: 1em;
+    outline: none;
+}
+
+#sendBtn{
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: linear-gradient(45deg,#ff4da6,#ff3399);
+    box-shadow: 0 0 20px #ff66cc;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#sendBtn:hover{
+    background-color: #e6005c;
+}
+
+button #sendBtn :hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff99cc;
+}
+
+/*floatingHeart*/
+#heartContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+}
+
+.heart{
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 30% 30%,#ff69b4,#ff1493);
+    position: absolute;
+    animation: floatHeart 2s ease-out forwards;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 8px rgba(255,105,180,0.6);
+    top: 0;
+}
+
+@keyframes floatHeart {
+    0%{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-100px) scale(1.4);
+    }
+}
+
+.heart::after,.heart::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart::after{
+    left: 10px;
+    top: 0;
+}
+
+.heart::before{
+    top: -10px;
+    left: 0;
+}
+
+/*error&shake*/
+.errorMessage{
+    color: crimson;
+    font-size: 0.9em;
+    height: 1.2em;
+    margin-top: 5px;
+}
+
+.shake{
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake{
+    0%{transform: translateX(0);}
+    25%{transform: translateX(-8px);}
+    50%{transform: translateX(8px);}
+    75%{transform: translateX(-6px);}
+    100%{transform: translateX(0);}
+}
+
+/*Mobile first*/
+@media (max-width: 480px) {
+    .loginContainer{
+        padding: 20px;
+    }
+
+    h2{
+        font-size: 1.2em;
+    }
+
+    input,button{
+        font-size: 1em;
+    }
+}
